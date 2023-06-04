@@ -1,0 +1,2 @@
+<small *ngIf="abstractControl.errors && abstractControl.hasError('required') && (abstractControl.touched || abstractControl.dirty)" style="color: red;">Este campo es requerido.</small>
+<small *ngIf="abstractControl.errors && abstractControl.hasError('pattern') && (abstractControl.touched || abstractControl.dirty)" style="color: red;">Formato incorrecto.</small>

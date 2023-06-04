@@ -1,0 +1,35 @@
+<div class="container">
+	<form [formGroup]="frmGeneral">
+		<div class="row">
+			<div class="col-sm-4">
+				<label>Primer valor</label>
+				<input type="text" class="form-control" formControlName="firstValue">
+				<app-show-error [abstractControl]="firstValueFb"></app-show-error>
+			</div>
+			<div class="col-sm-4">
+				<label>Segundo valor</label>
+				<input type="text" class="form-control" formControlName="secondValue">
+				<app-show-error [abstractControl]="secondValueFb"></app-show-error>
+			</div>
+			<div class="col-sm-4">
+				<label>&nbsp;</label>
+				<button type="button" class="btn btn-primary w-100" (click)="addRow()">Registrar datos</button>
+			</div>
+		</div>
+		<hr>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Primer valor</th>
+					<th>Segundo valor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let item of listValue">
+					<td>{{item.fieldOne}}</td>
+					<td>{{item.fieldTwo}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</div>
